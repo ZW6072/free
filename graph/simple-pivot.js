@@ -114,7 +114,6 @@ var pivotA3 = new WebDataRocks({
 		},
     reportcomplete: function() {
       pivotA3.off("reportcomplete");
-      createChartA3(); //quand le pivot est créé, le chart peut être créé
     }
 });
 
