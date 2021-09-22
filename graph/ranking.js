@@ -6,14 +6,14 @@ var pivotA2 = new WebDataRocks({
     report: {
 			"dataSource": {
           "dataSourceType": "csv",
-					"filename": "https://zw6072.github.io/depot_data//free/bretagne_sites_simple.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
+					"filename": "https://zw6072.github.io/depot_data/free/bretagne_sites_full.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
       },
 			"slice": {
         "reportFilters": [
         ],
         "sorting": {
             "column": {
-                "type": "asc",
+                "type": "desc",
                 "tuple": [],
                 "measure": "Population/Capacity"
               },
@@ -30,7 +30,6 @@ var pivotA2 = new WebDataRocks({
 				],
 				"columns": [
 						{
-
 						}
 				],
 				"measures": [
@@ -38,7 +37,12 @@ var pivotA2 = new WebDataRocks({
 						"uniqueName": "Population/Capacity",
 						"aggregation": "sum",
 						"format": "currency"
-		 				}
+          },
+            {
+            "uniqueName": "Capacite_th",
+            "aggregation": "sum",
+            "format": "currency"
+            }
 	 			]
 			}
 		},
@@ -104,7 +108,7 @@ function drawChartA2(rawData) {
           title: {
               display: true,
               fontSize: 18,
-              text: 'Population/mbits - site by site'
+              text: 'Population/capacity (Mbps) - site by site'
           },
           scale: {
               ticks: {
@@ -132,6 +136,7 @@ function drawChartA2(rawData) {
     });
 
     var colorChangeValue = 100; //set this to whatever is the deciding color change value
+
     var dataset = chart.data.datasets[0];
     for (var i = 0; i < dataset.data.length; i++) {
       if (dataset.data[i] > colorChangeValue) {

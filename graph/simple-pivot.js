@@ -5,7 +5,7 @@ var pivotA3 = new WebDataRocks({
     report: {
 			"dataSource": {
           "dataSourceType": "csv",
-					"filename": "https://zw6072.github.io/depot_data/bloonet/sites_iris.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
+					"filename": "https://zw6072.github.io/depot_data/free/bretagne_sites_full.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
       },
       "options": {
         "configuratorButton": false,
