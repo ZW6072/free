@@ -6,7 +6,7 @@ var pivotA2 = new WebDataRocks({
     report: {
 			"dataSource": {
           "dataSourceType": "csv",
-					"filename": "https://zw6072.github.io/depot_data/bloonet/sites_france.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
+					"filename": "https://zw6072.github.io/depot_data//free/bretagne_sites_simple.csv" //seules les sources en ligne peuvent être lues, sauf à passer par le bouton d'appel d'un csv
       },
 			"slice": {
         "reportFilters": [
@@ -15,16 +15,16 @@ var pivotA2 = new WebDataRocks({
             "column": {
                 "type": "asc",
                 "tuple": [],
-                "measure": "Population"
+                "measure": "Population/Capacity"
               },
         },
 				"rows": [
             {
-						"uniqueName": "Name", //champs "ent" en ligne
+						"uniqueName": "Site", //champs "ent" en ligne
             "filter": {
                 "type": "top",
-                "quantity": 200,
-                "measure": "Population"
+                "quantity": 250,
+                "measure": "Population/Capacity"
               },
 						},
 				],
@@ -35,7 +35,7 @@ var pivotA2 = new WebDataRocks({
 				],
 				"measures": [
 		 				{
-						"uniqueName": "Population",
+						"uniqueName": "Population/Capacity",
 						"aggregation": "sum",
 						"format": "currency"
 		 				}
@@ -104,7 +104,7 @@ function drawChartA2(rawData) {
           title: {
               display: true,
               fontSize: 18,
-              text: 'Covered households site by site'
+              text: 'Population/mbits - site by site'
           },
           scale: {
               ticks: {
@@ -131,7 +131,7 @@ function drawChartA2(rawData) {
         options: options
     });
 
-    var colorChangeValue = 10000; //set this to whatever is the deciding color change value
+    var colorChangeValue = 100; //set this to whatever is the deciding color change value
     var dataset = chart.data.datasets[0];
     for (var i = 0; i < dataset.data.length; i++) {
       if (dataset.data[i] > colorChangeValue) {
