@@ -110,7 +110,7 @@ function drawChartA2(rawData) {
               ticks: {
                   beginAtZero: true
               },
-              reverse: false
+              reverse: false,
           },
           animation: {
               animateRotate: false,
