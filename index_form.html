@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible"
+		  content="IE=9; IE=8; IE=7" />
+	<meta content="text/html; charset=UTF-8"
+		  http-equiv="content-type">
+	<meta name="viewport"
+		  content="width=1024">
+	<title>Form</title>
+	<link href="css/style-responsive.css" rel="stylesheet">
+	<link href="https://cdn.webdatarocks.com/latest/webdatarocks.min.css" rel="stylesheet"/>
+	<script src="https://cdn.webdatarocks.com/latest/webdatarocks.toolbar.min.js"></script>
+	<script src="css/webdatarocks.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+	<section>
+		<div class="container-md">
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<h6 class="mt-3">Form</h6>
+							<table class=table-responsive> <!--colonne de gauche : pivot / colonne de droite : chart-->
+											<tr>
+											<td>
+												<div class="responsive" id="pivotA3" width=700></div> <!--masque le pivot pour ne garder que le chart/"style=display:none;-->  <!--le pivot-->
+											</td>
+											<td>
+												<div class="responsive" id="chartcontainerA3" width=700></div> <!--masque le pivot pour ne garder que le chart/"style=display:none;-->  <!--le pivot-->
+											</td>
+											</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container-md">
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<h6 class="mt-3">Form</h6>
+							<table class=table-responsive> <!--colonne de gauche : pivot / colonne de droite : chart-->
+											<tr>
+											<td>
+												<div class="responsive" id="pivotA2" width=200></div> <!--masque le pivot pour ne garder que le chart/"style=display:none;-->  <!--le pivot-->
+											</td>
+											<td>
+												<div class="responsive" id="chartcontainerA2" width=700></div> <!--masque le pivot pour ne garder que le chart/"style=display:none;-->  <!--le pivot-->
+											</td>
+											</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="graph/simple-pivot.js"></script>
+	<script src="graph/A2.js"></script>
+
+
+</body>
+
+
+<footer class="position-relative border-top">
+	<div class="footer pt-3 background-white">
+		<div class="container pt-1">
+			<div class="row align-items-center justify-content-md-between pb-4">
+				<div class="col-md-6 d-flex align-items-center">
+					<img class="mr-3"
+						 width="50"
+						 src="img/logo_siradel.png">
+					<div id="copyright"
+						 class="copyright text-sm text-center text-md-left">SIRADEL</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</html>
